@@ -1,0 +1,75 @@
+Firm,Gender,Ethnicity,Undergraduate,Law school,Other degrees,Languages,Started with firm?,Previously Partner at other location?
+Kirkland & Ellis,F,White,Uppsala,NYU,Yes,2,No,Yes
+Kirkland & Ellis,F,White,Vassar,NYU,No,1,No,Yes
+Kirkland & Ellis,F,White,GWU,Fordham,No,1,No,Yes
+Kirkland & Ellis,M,White,Ohio Wesleyan,UT,No,1,No,Yes
+Kirkland & Ellis,F,White,Harvard,Columbia,Yes,2,No,Yes
+Kirkland & Ellis,M,White,NYU,Harvard,Yes,4,No,No
+Kirkland & Ellis,M,White,LSU,LSU,Yes,1,No,Yes
+Kirkland & Ellis,M,White,UW-Madison,NYU,No,1,No,Yes
+Kirkland & Ellis,M,White,Michigan State,Harvard,No,1,Yes,No
+Kirkland & Ellis,F,White,Wellesley,University of Michigan,No,1,No,No
+Kirkland & Ellis,F,Black,UV,UV,No,1,No,No
+Kirkland & Ellis,F,Asian,NYU,New York Law School,No,2,No,Yes
+Kirkland & Ellis,F,White,SUNY,Cornell,No,1,No,Yes
+Kirkland & Ellis,M,Hispanic,University of Buffalo,Hofstra,Yes,2,No,No
+Latham & Watkins,M,White,Macalester,University of Chicago,No,1,No,Yes
+Latham & Watkins,M,White,Brown,University of Michigan,No,1,Yes,No
+Latham & Watkins,M,Asian,Columbia,Cornell,No,3,No,No
+Latham & Watkins,M,Asian,Hawaii,UC-Hastings,No,2,Yes,No
+Latham & Watkins,M,Hispanic,Carnegie Melon,NYU,Yes,2,No,Yes
+Latham & Watkins,M,Asian,NA,Columbia,No,2,Yes,No
+Latham & Watkins,M,White,Harvard,Harvard,No,1,No,Yes
+Latham & Watkins,M,White,Yale,Cardoza,No,1,No,Yes
+Latham & Watkins,F,White,NA,Columbia,No,1,Yes,Yes
+Latham & Watkins,M,White,BYU,University of Michigan,No,2,Yes,No
+Latham & Watkins,M,White,Dartmouth,BC,Yes,1,No,Yes
+Latham & Watkins,M,White,Fordham,NYU,No,1,No,Yes
+Latham & Watkins,F,White,NA,SMU Dedman,No,1,No ,Yes
+Latham & Watkins,F,White,Cornell,Columbia,No,1,No,No
+Latham & Watkins,M,White,University of Michigan,University of Minnesota,No,1,No,Yes
+Baker & McKenzie,M,White,Wake Forest,Pace,Yes,2,No,No
+Baker & McKenzie,F,White,Cornell,UCLA,No,1,Yes,Yes
+Baker & McKenzie,F,Hispanic,NA,Harvard,Yes,5,No,Yes
+Baker & McKenzie,M,Asian,Georgetown,Northwestern,No,1,Yes,Yes
+Baker & McKenzie,M,White,Institute d'Etudes,Harvard,Yes,2,No,Yes
+Baker & McKenzie,M,White,Upenn,New York Law School,No,1,No,Yes
+Baker & McKenzie,F,White,SUNY,Fordham,No,1,No,Yes
+Baker & McKenzie,F,White,UNC,Souther Methodist University,No,1,No,Yes
+Baker & McKenzie,M,White,Binghamton,American,Yes,1,Yes,Yes
+Baker & McKenzie,F,White,Yale,NYU,No,2,No,Yes
+Baker & McKenzie,M,White,City University,Yale,No,2,Yes,No
+Baker & McKenzie,M,Black,Nigeria,Nigerian Law School,Yes,3,No,No
+Baker & McKenzie,F,White,UConn,Quinnipiac,Yes,1,No,Yes
+Baker & McKenzie,F,White,NYU,Quinnipiac,Yes,1,No,Yes
+Baker & McKenzie,M,White,NA,Toronto,Yes,1,No,Yes
+DLA Piper,M,White,Harvard,BC,No,1,No,Yes
+DLA Piper,M,White,Stony Brook,GWU,No,1,No,Yes
+DLA Piper,M,Asian,University of Illinois,Northwestern,No,2,No,Yes
+DLA Piper,M,Hispanic,NA,Rutgers,No,2,No,Yes
+DLA Piper,M,White,UC Davis,University of Pacific,No,2,No,Yes
+DLA Piper,F,White,NA,University of Florida,Yes,1,No,Yes
+DLA Piper,M,Black,Emory,University of Georgia,No,1,No,Yes
+DLA Piper,M,White,Institute d'Etudes,Columbia,Yes,2,No,Yes
+DLA Piper,M,White,University of Illinois,GWU,No,1,No,Yes
+DLA Piper,M,White,Rutgers,Rutgers,Yes,1,No,Yes
+DLA Piper,M,White,BYU,BYU,Yes,1,No,Yes
+DLA Piper,M,Asian,Tulane,Temple,No,1,No,No
+DLA Piper,F,White,Amherst,Northeasterm,Yes,1,No,No
+DLA Piper,F,White,NA,Souther Methodist University,No,1,No,Yes
+DLA Piper,M,White,Rutgers,BC,No,1,No,Yes
+Skadden,M,White,Dartmouth,Stanford,Yes,1,No,Yes
+Skadden,M,White,University of Michigan,Georgetown,No,1,No,Yes
+Skadden,F,White,Harvard,Harvard,No,1,Yes,No
+Skadden,M,White,Northwestern,Georgetown,No,1,No,Yes
+Skadden,M,White,Navy,Harvard,No,1,Yes,No
+Skadden,M,White,Notre Dame,BC,No,1,No,Yes
+Skadden,M,Asian,NA,GWU,No,1,No,Yes
+Skadden,M,Hispanic,NA,Northwestern,Yes,2,Yes,No
+Skadden,M,White,University of Chicago,University of Chicago,No,1,Yes,No
+Skadden,M,White,UT,Columbia,No,1,Yes,No
+Skadden,M,White,American,American,Yes,1,Yes,No
+Skadden,M,White,Yale,Harvard,Yes,1,No,No
+Skadden,M,Black,University of Maryland,Cornell,No,1,No,No
+Skadden,M,Hispanic,NA,Yale,No,1,Yes,No
+Skadden,M,Asian,Yale,University of Chicago,No,2,Yes,No
