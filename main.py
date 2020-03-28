@@ -3,15 +3,15 @@
 ### Training Input: CSV with candidates and characteristics
 ### Training Output: Prediction model for candidate potential
 
-### Step 1: Provide CSV file
+### Step 1: Provide CSV file (Complete)
 ### O(n)
 
 
-### Step 2: Convert CSV into list of objects with properties
+### Step 2: Convert CSV into list of objects with properties (Complete)
 ### O(n)
 
 
-### Step 3: Split list into training list and testing list
+### Step 3: Split list into training list and testing list (Rojaun- In progress)
 ### O(n)
 
 
