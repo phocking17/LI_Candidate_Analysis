@@ -27,7 +27,3 @@ def csv_to_object_list(file_name):
 		lawyer_object_list.append(x)
 
 	return lawyer_object_list
-
-temp_list = csv_to_object_list('raw_Test_Data.csv')
-
-print(temp_list[-1].lawschool)
