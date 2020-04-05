@@ -19,11 +19,44 @@ import time
 chart = pd.read_csv('test.csv', sep=',')
 
 ### Select number of points to test
-chart = chart[:10000]
+chart = chart[:1000]
 
 ##################################################################################################################
 ### Preprocessing
 ##################################################################################################################
+
+def create_identifiers(data):
+	identifier_list = []
+
+	gender = data['gender'].unique()
+	ethnicity = data[' ethnicity'].unique()
+
+	for g in gender:
+		for e in ethnicity:
+			new_list = [g, e]
+			identifier_list.append(new_list)
+
+	return identifier_list
+
+def split_data_by_identifier(data):
+	identifier_list = create_identifiers(data)
+	column_list = data.columns
+	identifier_tuples = [(i[0], i[1]) for i in identifier_list]
+
+	identifier_dictionary = {n:pd.DataFrame(columns = column_list) for n in identifier_tuples}
+
+	for row in data.iterrows():
+		ID_check = (row[1]['gender'], row[1][' ethnicity'])
+		list_row = row[1].values.tolist()
+
+		sample = identifier_dictionary[ID_check]
+		sample = sample.append({n:l for n,l in zip(column_list,list_row)}, ignore_index = True)
+		identifier_dictionary[ID_check] = sample
+
+	return identifier_dictionary
+
+
+
 
 
 
@@ -51,7 +84,7 @@ chart = transform_to_classes(chart, parameter_list)
 
 
 
-
+identifier_dictionary_df = split_data_by_identifier(chart)
 ### Print data counts
 '''
 print(chart[' success?'].value_counts())
@@ -69,21 +102,21 @@ plt.show()
 
  
 ### Seperate Response and Feature variables
-X = chart.drop(' success?', axis=1)
-y = chart[' success?']
+#X = chart.drop(' success?', axis=1)
+#y = chart[' success?']
 
 
 
 ### Split Data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
 
 
 ### Apply Scaling
-sc = StandardScaler()
-X_train = sc.fit_transform(X_train)
-X_test = sc.transform(X_test)
+#sc = StandardScaler()
+#X_train = sc.fit_transform(X_train)
+#X_test = sc.transform(X_test)
 
 
 ##################################################################################################################
@@ -127,6 +160,7 @@ Learn_Object_List.append(mlpc)
 ### Fit curve and return prediction
 def make_prediction(learn_object, X_train, y_train, X_test):
 	start_time = time.time()
+	y_train = y_train.astype(int)
 	learn_object.lambda_code.fit(X_train, y_train)
 	predict = learn_object.lambda_code.predict(X_test)
 	learn_object.prediction = predict
@@ -136,13 +170,14 @@ def make_prediction(learn_object, X_train, y_train, X_test):
 
 ### Create reports
 def create_reports(learn_object, y_test):
+	y_test = y_test.astype(int)
 	learn_object.classification_report = classification_report(y_test, learn_object.prediction)
 	learn_object.accuracy_score = accuracy_score(y_test, learn_object.prediction)
 	learn_object.confusion_matrix = confusion_matrix(y_test,learn_object.prediction)
 	return learn_object
 
 ### Create multiple reports
-def create_multiple_reports(Learn_Object_List, X_train, y_train, X_test):
+def create_multiple_reports(Learn_Object_List, X_train, y_train, X_test,y_test):
 	new_item_list = []
 	for item in Learn_Object_List:
 		item = make_prediction(item, X_train, y_train, X_test)[1]
@@ -176,6 +211,57 @@ def summarize_multiple(item_list):
 
 
 
-
+'''
 item_list = create_multiple_reports(Learn_Object_List, X_train, y_train, X_test)
 summarize_multiple(item_list)
+'''
+
+
+
+
+
+
+
+def full_method(data, Learn_Object_List = Learn_Object_List):
+	parameter_list = ['gender', ' ethnicity']
+	data = transform_to_classes(data, parameter_list)
+	X = data.drop(' success?', axis=1)
+	y = data[' success?']
+	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+	sc = StandardScaler()
+	X_train = sc.fit_transform(X_train)
+	X_test = sc.transform(X_test)
+	attempts = create_multiple_reports(Learn_Object_List, X_train, y_train, X_test, y_test)
+
+	summarize_multiple(attempts)
+	return attempts
+
+full_method(chart)
+'''
+for item in identifier_dictionary_df.keys():
+	print('\n')
+	print(item)
+	full_method(identifier_dictionary_df[item])
+	print('\n')
+	print('\n')
+	print('\n')
+
+def Identifier_learning(identifier_dictionary_df, Learn_Object_List):
+	class identifier:
+		def __init__(self):
+			self.weight = 0
+			self.accuracy = 0
+
+	point_list = []
+	for item in identifier_dictionary_df.keys():
+		t = full_method(identifier_dictionary_df[item])
+		print(t)
+
+
+tester = Identifier_learning(identifier_dictionary_df, Learn_Object_List)
+for i in tester:
+	print(i.weight)
+	print(i.accuracy)
+'''
+
+
