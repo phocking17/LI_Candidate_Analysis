@@ -22,7 +22,7 @@ def make_character():
 				ethnicity = 'White'
 			elif x < 0.8 and x > 0.7:
 				ethnicity = 'Asian'
-			elif x < 0.9 and x > 0.95:
+			elif x < 0.95 and x > 0.9:
 				ethnicity = 'Black'
 			else:
 				ethnicity = 'Hispanic'
@@ -66,6 +66,8 @@ def make_character():
 					languages = 2
 				if x > 0.9:
 					languages = int(((x-0.9)*100)//1)
+			if languages == 0:
+					languages = 1
 
 		### Determines if Started with firm they're currently at (1 if started with firm)
 		if step == 6:
@@ -102,6 +104,9 @@ def Create_File(name, n):
 	
 	### Calls File
 	file = open(name, 'w')
+
+	file.write('gender, ethnicity, undergrad, lawschool, extradegrees, languages, started?, partnerfirst?, success?')
+	file.write('\n')
 
 	### Iterates over selected number of candidates
 	for i in range(n):

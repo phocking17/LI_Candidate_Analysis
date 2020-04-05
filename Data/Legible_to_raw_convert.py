@@ -83,6 +83,9 @@ def convert_Test_Data():
 	### Create new raw data file
 	raw_data = open('raw_Test_Data.csv', 'w')
 
+	raw_data.write('gender, ethnicity, undergrad, lawschool, extradegrees, languages, started?, partnerfirst?, success?')
+	raw_data.write('\n')
+
 	for line in lines[1:]:
 		count = 1
 		while count <= 8:
