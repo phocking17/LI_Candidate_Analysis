@@ -93,10 +93,10 @@ print(chart[' success?'].value_counts())
 
 
 ### Visualize successes
-'''
-sns.countplot(chart[' success?'])
+
+sns.countplot(chart[' lawschool'])
 plt.show()
-'''
+
 
 
 

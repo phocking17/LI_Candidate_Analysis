@@ -26,6 +26,8 @@ X = np.sort(5 * rng.rand(80, 1), axis=0)
 y = np.sin(X).ravel()
 y[::5] += 3 * (0.5 - rng.rand(16))
 
+print(X)
+
 # Fit regression model
 regr_1 = DecisionTreeRegressor(max_depth=2)
 regr_2 = DecisionTreeRegressor(max_depth=5)
