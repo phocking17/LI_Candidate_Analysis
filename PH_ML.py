@@ -93,10 +93,10 @@ print(chart[' success?'].value_counts())
 
 
 ### Visualize successes
-
+'''
 sns.countplot(chart[' lawschool'])
 plt.show()
-
+'''
 
 
 
@@ -168,6 +168,7 @@ def make_prediction(learn_object, X_train, y_train, X_test):
 	learn_object.runtime = end_time
 	return predict, learn_object
 
+
 ### Create reports
 def create_reports(learn_object, y_test):
 	y_test = y_test.astype(int)
@@ -232,7 +233,6 @@ def full_method(data, Learn_Object_List = Learn_Object_List):
 	X_train = sc.fit_transform(X_train)
 	X_test = sc.transform(X_test)
 	attempts = create_multiple_reports(Learn_Object_List, X_train, y_train, X_test, y_test)
-
 	summarize_multiple(attempts)
 	return attempts
 
@@ -265,3 +265,4 @@ for i in tester:
 '''
 
 
+### Test Test Test
